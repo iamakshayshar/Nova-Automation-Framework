@@ -8,6 +8,8 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 from datetime import datetime
 
+from src.drivers.driver_factory import cleanup_profiles
+
 
 # ---------- Utility Functions ----------
 def ensure_executable(path):
@@ -129,3 +131,8 @@ def pytest_runtest_makereport(item, call):
             path = os.path.join("reports/screenshots", screenshot_name)
             driver_fixture.save_screenshot(path)
             print(f"\n[!] Screenshot saved to: {path}")
+
+@pytest.fixture(scope="session", autouse=True)
+def cleanup_after_session():
+    yield
+    cleanup_profiles()

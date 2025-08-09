@@ -1,40 +1,65 @@
 import os
 import platform
+import shutil
+import tempfile
 import zipfile
 import requests
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service as ChromeService
 
 from src.utils.logger import logger
 
 CHROME_DRIVER_URL_ARM = "https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/138.0.7204.184/mac-arm64/chromedriver-mac-arm64.zip"
 
+# Track temp profile dirs for cleanup
+_created_profiles = []
+
 def _build_driver(browser, headless):
     system = platform.system().lower()
     machine = platform.machine().lower()
 
     if browser.lower() == "chrome":
-        logger.info(f"Detected system: {system}, arch: {machine}")
+        options = Options()
 
-        # Special handling for Apple Silicon
-        if system == "darwin" and machine == "arm64":
-            driver_path = _download_arm64_chromedriver()
-        else:
-            from webdriver_manager.chrome import ChromeDriverManager
-            driver_path = ChromeDriverManager().install()
-
-        options = webdriver.ChromeOptions()
         if headless:
             options.add_argument("--headless=new")
             options.add_argument("--disable-gpu")
-        options.add_argument("--window-size=1920,1080")
+
+        # Fix parallel Chrome profile conflict
+        user_data_dir = tempfile.mkdtemp(prefix="chrome-profile-")
+        _created_profiles.append(user_data_dir)
+        options.add_argument(f"--user-data-dir={user_data_dir}")
+
         options.add_argument("--no-sandbox")
         options.add_argument("--disable-dev-shm-usage")
+        options.add_argument("--window-size=1920,1080")
 
-        service = ChromeService(driver_path)
-        return webdriver.Chrome(service=service, options=options)
+        # Try to log Chrome version
+        try:
+            chrome_version = subprocess.check_output(
+                ["google-chrome", "--version"], text=True
+            ).strip()
+        except Exception:
+            chrome_version = "Unknown"
 
-    # ... keep Firefox code as before ...
+        logger.info(f"Detected system: {system}, arch: {machine}")
+        logger.info(f"Using Chrome version: {chrome_version}")
+        logger.info(f"Temporary Chrome profile path: {user_data_dir}")
+
+        driver = webdriver.Chrome(options=options)
+        return driver
+
+    raise ValueError(f"Browser '{browser}' is not supported on {system}/{machine}")
+
+def cleanup_profiles():
+    """Remove all temp Chrome profile dirs created during the session."""
+    for profile_dir in _created_profiles:
+        try:
+            shutil.rmtree(profile_dir, ignore_errors=True)
+            logger.info(f"Deleted temp Chrome profile: {profile_dir}")
+        except Exception as e:
+            logger.warning(f"Could not delete {profile_dir}: {e}")
 
 
 def _download_arm64_chromedriver():

@@ -1,0 +1,13 @@
+pytest>=7.0
+selenium>=4.10
+webdriver-manager>=4.0.0
+pytest-xdist>=3.0         # parallel
+pytest-rerunfailures>=10 # retries
+flaky>=3.7.0      # flaky marker helpers (optional)
+pyyaml
+python-dotenv
+faker
+loguru
+requests
+pytest-reportportal>=5.0  # ReportPortal pytest plugin
+reportportal-client       # ReportPortal python client (optional explicit client)

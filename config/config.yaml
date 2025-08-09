@@ -1,0 +1,8 @@
+env: qa
+base_url: "https://example.com"
+browser:
+  default: chrome
+  headless: False
+  implicit_wait: 5
+  window_size: [1366, 768]
+timeout: 20

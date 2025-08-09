@@ -1,0 +1,44 @@
+2025-08-09 13:18:14,403 [INFO] NovaFramework - Detected system: darwin, arch: arm64
+2025-08-09 13:18:14,404 [INFO] NovaFramework - Downloading ARM64 ChromeDriver for Apple Silicon...
+2025-08-09 13:18:18,901 [INFO] NovaFramework - Detected system: darwin, arch: arm64
+2025-08-09 13:18:18,902 [INFO] NovaFramework - Downloading ARM64 ChromeDriver for Apple Silicon...
+2025-08-09 13:22:54,077 [INFO] NovaFramework - Detected system: darwin, arch: arm64
+2025-08-09 13:22:54,077 [INFO] NovaFramework - Downloading ARM64 ChromeDriver for Apple Silicon...
+2025-08-09 13:24:47,666 [INFO] NovaFramework - Detected system: darwin, arch: arm64
+2025-08-09 13:24:47,666 [INFO] NovaFramework - Downloading ARM64 ChromeDriver for Apple Silicon...
+2025-08-09 13:25:41,762 [INFO] NovaFramework - Detected system: darwin, arch: arm64
+2025-08-09 13:25:41,762 [INFO] NovaFramework - Downloading ARM64 ChromeDriver for Apple Silicon...
+2025-08-09 13:29:31,347 [INFO] NovaFramework - APIClient initialized: https://reqres.in/api
+2025-08-09 13:29:31,348 [INFO] NovaFramework - POST https://reqres.in/api/users | Payload: {'name': 'John Doe', 'job': 'Tester'}
+2025-08-09 13:29:31,527 [INFO] NovaFramework - Response 401
+2025-08-09 13:29:31,562 [INFO] NovaFramework - APIClient initialized: https://reqres.in/api
+2025-08-09 13:29:31,562 [INFO] NovaFramework - POST https://reqres.in/api/users | Payload: {'name': 'John Doe', 'job': 'Tester'}
+2025-08-09 13:29:31,744 [INFO] NovaFramework - Response 401
+2025-08-09 13:29:31,752 [INFO] NovaFramework - Detected system: darwin, arch: arm64
+2025-08-09 13:29:31,752 [INFO] NovaFramework - Downloading ARM64 ChromeDriver for Apple Silicon...
+2025-08-09 13:29:31,842 [INFO] NovaFramework - APIClient initialized: https://reqres.in/api
+2025-08-09 13:29:31,842 [INFO] NovaFramework - GET https://reqres.in/api/users/2
+2025-08-09 13:29:32,179 [INFO] NovaFramework - Response 401
+2025-08-09 13:29:32,188 [INFO] NovaFramework - APIClient initialized: https://reqres.in/api
+2025-08-09 13:29:32,188 [INFO] NovaFramework - GET https://reqres.in/api/users/2
+2025-08-09 13:29:32,381 [INFO] NovaFramework - Response 401
+2025-08-09 13:29:33,812 [INFO] NovaFramework - Detected system: darwin, arch: arm64
+2025-08-09 13:29:33,813 [INFO] NovaFramework - Downloading ARM64 ChromeDriver for Apple Silicon...
+2025-08-09 13:29:35,565 [INFO] NovaFramework - Detected system: darwin, arch: arm64
+2025-08-09 13:29:35,565 [INFO] NovaFramework - Downloading ARM64 ChromeDriver for Apple Silicon...
+2025-08-09 13:29:38,381 [INFO] NovaFramework - Detected system: darwin, arch: arm64
+2025-08-09 13:29:38,381 [INFO] NovaFramework - Downloading ARM64 ChromeDriver for Apple Silicon...
+2025-08-09 13:30:40,055 [INFO] NovaFramework - APIClient initialized: https://reqres.in/api
+2025-08-09 13:30:40,055 [INFO] NovaFramework - POST https://reqres.in/api/users | Payload: {'name': 'John Doe', 'job': 'Tester'}
+2025-08-09 13:30:40,554 [INFO] NovaFramework - Response 401
+2025-08-09 13:30:40,597 [INFO] NovaFramework - Detected system: darwin, arch: arm64
+2025-08-09 13:30:40,597 [INFO] NovaFramework - Downloading ARM64 ChromeDriver for Apple Silicon...
+2025-08-09 13:30:40,597 [INFO] NovaFramework - APIClient initialized: https://reqres.in/api
+2025-08-09 13:30:40,597 [INFO] NovaFramework - GET https://reqres.in/api/users/2
+2025-08-09 13:30:40,657 [INFO] NovaFramework - Response 200
+2025-08-09 13:30:42,384 [INFO] NovaFramework - Detected system: darwin, arch: arm64
+2025-08-09 13:30:42,384 [INFO] NovaFramework - Downloading ARM64 ChromeDriver for Apple Silicon...
+2025-08-09 13:30:44,909 [INFO] NovaFramework - Detected system: darwin, arch: arm64
+2025-08-09 13:30:44,910 [INFO] NovaFramework - Downloading ARM64 ChromeDriver for Apple Silicon...
+2025-08-09 13:30:51,919 [INFO] NovaFramework - Detected system: darwin, arch: arm64
+2025-08-09 13:30:51,919 [INFO] NovaFramework - Downloading ARM64 ChromeDriver for Apple Silicon...

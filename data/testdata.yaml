@@ -1,0 +1,13 @@
+qa:
+  google_search:
+    keyword: "OpenAI"
+  api:
+    base_url: "https://reqres.in/api"
+    user_id: 2
+
+staging:
+  google_search:
+    keyword: "ReportPortal"
+  api:
+    base_url: "https://reqres.in/api"
+    user_id: 3

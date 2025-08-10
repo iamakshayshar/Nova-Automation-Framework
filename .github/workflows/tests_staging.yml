@@ -1,15 +1,16 @@
 name: Run Automation Tests - Staging
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+  workflow_run:
+    workflows: [ "Run Automation Tests - QA" ]
+    types:
+      - completed
 
 jobs:
   test:
+    # Only run if the QA workflow succeeded
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+
     runs-on: ubuntu-latest
 
     strategy:

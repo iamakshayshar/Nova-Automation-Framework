@@ -1,7 +1,7 @@
 # 🚀 Nova Automation Framework
 
-[![QA - Build](https://github.com/iamakshayshar/Nova-Automation-Framework/actions/workflows/tests-qa.yml/badge.svg?branch=main)](https://github.com/iamakshayshar/Nova-Automation-Framework/actions/workflows/tests-qa.yml)
-[![Staging - Build](https://github.com/iamakshayshar/Nova-Automation-Framework/actions/workflows/tests-staging.yml/badge.svg?branch=main)](https://github.com/iamakshayshar/Nova-Automation-Framework/actions/workflows/tests-staging.yml)
+[![QA - Build](https://github.com/iamakshayshar/Nova-Automation-Framework/actions/workflows/tests_qa.yml/badge.svg?branch=main)](https://github.com/iamakshayshar/Nova-Automation-Framework/actions/workflows/tests_qa.yml)
+[![Staging - Build](https://github.com/iamakshayshar/Nova-Automation-Framework/actions/workflows/tests_staging.yml/badge.svg?branch=main)](https://github.com/iamakshayshar/Nova-Automation-Framework/actions/workflows/tests_staging.yml)
 ![Python Version](https://img.shields.io/badge/python-3.13%2B-blue)
 ![License](https://img.shields.io/github/license/iamakshayshar/Nova-Automation-Framework?color=green)
 ![Last Commit](https://img.shields.io/github/last-commit/iamakshayshar/Nova-Automation-Framework)

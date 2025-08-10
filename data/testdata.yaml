@@ -1,6 +1,6 @@
 qa:
   google_search:
-    keyword: "OpenAI"
+    keyword: "Google.com"
   api:
     path: /users/
     user_id: 2

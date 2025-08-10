@@ -11,3 +11,4 @@ loguru
 requests
 pytest-reportportal>=5.0  # ReportPortal pytest plugin
 reportportal-client       # ReportPortal python client (optional explicit client)
+selenium-page-factory

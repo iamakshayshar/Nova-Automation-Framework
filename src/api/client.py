@@ -1,11 +1,14 @@
 import requests
+
 from src.utils.logger import logger
+
 
 class APIClient:
     def __init__(self, base_url):
         self.base_url = base_url.rstrip("/")
         self.session = requests.Session()
         self.session.headers.update({"Accept": "application/json"})
+        self.session.headers.update({"x-api-key": "reqres-free-v1"})
         logger.info(f"APIClient initialized: {self.base_url}")
 
     def get(self, path, **kwargs):

@@ -33,6 +33,8 @@ MANIFEST
 *.spec
 
 # Installer logs
+reports/framework.log
+src/logs/automation.log
 pip-log.txt
 pip-delete-this-directory.txt
 

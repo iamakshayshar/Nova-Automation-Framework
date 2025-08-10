@@ -25,27 +25,28 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: "3.13"
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          pip install chromedriver-autoinstaller
+          pip install chromedriver-autoinstaller pytest-html
 
       - name: Install Chrome
         run: |
           sudo apt-get update
           sudo apt-get install -y google-chrome-stable
 
-      - name: Run tests (UI + API)
+      - name: Run tests (UI + API) with HTML report
         run: |
+          mkdir -p reports
           chmod +x run_tests.sh
           python -c "import chromedriver_autoinstaller; chromedriver_autoinstaller.install()"
-          ./run_tests.sh ${{ matrix.env }} ${{ matrix.browser }} --headless
+          ./run_tests.sh ${{ matrix.env }} ${{ matrix.browser }} --headless --html=reports/report_${{ matrix.env }}_${{ matrix.browser }}.html --self-contained-html
 
-      - name: Upload Reports
+      - name: Upload HTML Report
         uses: actions/upload-artifact@v4
         with:
-          name: test-reports
+          name: pytest-html-report-${{ matrix.env }}-${{ matrix.browser }}
           path: reports/

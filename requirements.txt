@@ -1,5 +1,5 @@
 pytest>=7.0
-selenium>=4.10
+selenium>=4.15.1
 webdriver-manager>=4.0.0
 pytest-xdist>=3.0         # parallel
 pytest-rerunfailures>=10 # retries
@@ -12,3 +12,4 @@ requests
 pytest-reportportal>=5.0  # ReportPortal pytest plugin
 reportportal-client       # ReportPortal python client (optional explicit client)
 selenium-page-factory
+pytest-html

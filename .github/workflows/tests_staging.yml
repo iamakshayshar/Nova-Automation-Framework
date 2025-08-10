@@ -1,4 +1,4 @@
-name: Run Automation Tests
+name: Run Automation Tests - Staging
 
 on:
   push:

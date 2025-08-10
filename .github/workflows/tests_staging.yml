@@ -15,8 +15,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        env: [qa]
-        browser: [chrome]
+        env: [ staging ]
+        browser: [ chrome ]
 
     steps:
       - name: Checkout repository

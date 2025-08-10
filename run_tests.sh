@@ -28,6 +28,7 @@ pytest tests \
   $HEADLESS_FLAG \
   -n auto \
   --reruns 2 \
+  --reruns-delay 1 \
   --junitxml="$REPORT_DIR/junit_report.xml" \
   -v --disable-warnings
 

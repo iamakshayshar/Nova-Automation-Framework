@@ -1,12 +1,13 @@
 import os
 import shutil
 import stat
-import yaml
+from datetime import datetime
+
 import pytest
+import yaml
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
-from datetime import datetime
 
 from src.drivers.driver_factory import cleanup_profiles
 
@@ -131,6 +132,7 @@ def pytest_runtest_makereport(item, call):
             path = os.path.join("reports/screenshots", screenshot_name)
             driver_fixture.save_screenshot(path)
             print(f"\n[!] Screenshot saved to: {path}")
+
 
 @pytest.fixture(scope="session", autouse=True)
 def cleanup_after_session():

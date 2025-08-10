@@ -34,7 +34,7 @@ MANIFEST
 
 # Installer logs
 reports/framework.log
-src/logs/automation.log
+src/logs
 pip-log.txt
 pip-delete-this-directory.txt
 

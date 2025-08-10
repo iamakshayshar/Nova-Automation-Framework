@@ -11,10 +11,10 @@ class APIClient:
         self.session.headers.update({"x-api-key": "reqres-free-v1"})
         logger.info(f"APIClient initialized: {self.base_url}")
 
-    def get(self, path, **kwargs):
-        url = f"{self.base_url}/{path.lstrip('/')}"
+    def get_user(self, path, user_id):
+        url = f"{self.base_url}{path}{user_id}"
         logger.info(f"GET {url}")
-        resp = self.session.get(url, **kwargs)
+        resp = self.session.get(url)
         logger.info(f"Response {resp.status_code}")
         return resp
 

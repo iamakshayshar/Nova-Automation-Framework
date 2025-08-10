@@ -1,7 +1,7 @@
 # 🚀 Nova Automation Framework
 
 [![CI Build](https://github.com/iamakshayshar/Nova-Automation-Framework/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/iamakshayshar/Nova-Automation-Framework/actions/workflows/tests.yml)
-![Python Version](https://img.shields.io/badge/python-3.9%2B-blue)
+![Python Version](https://img.shields.io/badge/python-3.13%2B-blue)
 ![License](https://img.shields.io/github/license/iamakshayshar/Nova-Automation-Framework?color=green)
 ![Last Commit](https://img.shields.io/github/last-commit/iamakshayshar/Nova-Automation-Framework)
 ![Open Issues](https://img.shields.io/github/issues/iamakshayshar/Nova-Automation-Framework)
